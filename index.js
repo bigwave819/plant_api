@@ -18,6 +18,8 @@ connectDB()
 app.use('/api', userRoutes)
 app.use('/api', PlantRoutes)
 
-const PORT = process.env.PORT  || 5000
-
-app.listen(5000)
+// Start server
+const PORT = process.env.PORT || 7000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server is running on port ${PORT}`);
+});
