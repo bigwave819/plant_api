@@ -4,11 +4,12 @@ import cors from "cors"
 import userRoutes from "./routes/user.routes.js"
 import connectDB from "./config/db.js"
 import PlantRoutes from "./routes/plant.routes.js"
+import job from "./config/cron.js"
 
 const app = express()
 
 
-
+job.start()
 dotenv.config()
 app.use(cors())
 app.use(express.json())
