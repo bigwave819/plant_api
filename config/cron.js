@@ -3,7 +3,7 @@ import https from 'https';
 
 const job = new cron.CronJob('*/14 * * * *', function () {
     https
-        .get('https://plant-api-0yg7.onrender.com/api/signup', (res) => {
+        .get('https://plant-api-0yg7.onrender.com/api/plants', (res) => {
             if(res.statusCode === 200) console.log('GET request sent successfully');
             else console.log('GET request failed', res.statusCode)
         })
